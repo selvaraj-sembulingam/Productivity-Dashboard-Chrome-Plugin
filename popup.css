@@ -1,0 +1,156 @@
+body {
+    width: 380px;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    background-color: #f0f2f5;
+    margin: 0;
+    color: #333;
+}
+
+.container {
+    padding: 15px;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid #ddd;
+    padding-bottom: 10px;
+    margin-bottom: 15px;
+}
+
+h2, h3 {
+    margin: 0;
+    color: #1c1e21;
+}
+h3 {
+    font-size: 14px;
+    text-align: center;
+    margin-bottom: 10px;
+    color: #555;
+}
+
+#options-btn {
+    background: none;
+    border: none;
+    font-size: 20px;
+    cursor: pointer;
+    opacity: 0.6;
+    transition: opacity 0.2s;
+}
+#options-btn:hover {
+    opacity: 1;
+}
+
+#score-container {
+    text-align: center;
+    background-color: #fff;
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+    margin-bottom: 15px;
+}
+
+.score-label {
+    font-size: 14px;
+    color: #606770;
+}
+
+#score {
+    font-size: 36px;
+    font-weight: bold;
+    color: #007bff;
+}
+
+#stats-container {
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 20px;
+    font-size: 14px;
+}
+
+.stat {
+    text-align: center;
+}
+.stat-label {
+    display: block;
+    font-size: 12px;
+    margin-bottom: 4px;
+    color: #606770;
+}
+#productive-time, #distracting-time {
+    font-weight: 600;
+}
+
+#top-sites-container {
+    background-color: #fff;
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+    margin-bottom: 20px;
+}
+#top-sites-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.site-entry {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+    font-size: 14px;
+}
+
+.site-favicon {
+    width: 16px;
+    height: 16px;
+    margin-right: 10px;
+}
+
+.site-name {
+    flex-grow: 1;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.site-time {
+    font-weight: 600;
+    color: #333;
+}
+.loading {
+    color: #888;
+    text-align: center;
+}
+
+
+/* Heatmap styles */
+#heatmap-section {
+    padding-top: 15px;
+    border-top: 1px solid #ddd;
+}
+#heatmap-container {
+    display: grid;
+    grid-template-columns: 30px repeat(24, 1fr);
+    gap: 2px;
+}
+.day-label, .hour-label {
+    font-size: 9px; display: flex; align-items: center; justify-content: center; color: #555;
+}
+.heatmap-cell {
+    width: 100%; padding-bottom: 100%; background-color: #ebedf0; border-radius: 2px;
+}
+.heatmap-cell[data-level="1"] { background-color: #9be9a8; }
+.heatmap-cell[data-level="2"] { background-color: #40c463; }
+.heatmap-cell[data-level="3"] { background-color: #30a14e; }
+.heatmap-cell[data-level="4"] { background-color: #216e39; }
+.legend {
+    display: flex; justify-content: flex-end; align-items: center; gap: 4px; font-size: 10px; margin-top: 5px; color: #555;
+}
+.color-box { width: 12px; height: 12px; border-radius: 2px; }
+.color-box.level-0 { background-color: #ebedf0; }
+.color-box.level-1 { background-color: #9be9a8; }
+.color-box.level-2 { background-color: #40c463; }
+.color-box.level-3 { background-color: #30a14e; }
+.color-box.level-4 { background-color: #216e39; }

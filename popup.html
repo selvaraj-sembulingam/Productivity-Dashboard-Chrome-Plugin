@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Productivity Dashboard</title>
+    <link rel="stylesheet" href="popup.css">
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h2>Today's Dashboard</h2>
+            <button id="options-btn" title="Settings">⚙️</button>
+        </div>
+
+        <div id="score-container">
+            <div class="score-label">Productivity Score</div>
+            <div id="score">-- / 10</div>
+        </div>
+
+        <div id="stats-container">
+            <div class="stat">
+                <span class="stat-label productive">✅ Productive</span>
+                <span id="productive-time">0m</span>
+            </div>
+            <div class="stat">
+                <span class="stat-label distracting">❌ Distracting</span>
+                <span id="distracting-time">0m</span>
+            </div>
+        </div>
+
+        <div id="top-sites-container">
+            <h3>Top Sites Today</h3>
+            <ul id="top-sites-list">
+                <li class="loading">Tracking data...</li>
+            </ul>
+        </div>
+        
+        <div id="heatmap-section">
+            <h3>Weekly Productivity Heatmap</h3>
+            <div id="heatmap-container"></div>
+             <div class="legend">
+                <span>Less</span>
+                <div class="color-box level-0"></div>
+                <div class="color-box level-1"></div>
+                <div class="color-box level-2"></div>
+                <div class="color-box level-3"></div>
+                <div class="color-box level-4"></div>
+                <span>More</span>
+            </div>
+        </div>
+
+    </div>
+    <script src="popup.js"></script>
+</body>
+</html>
